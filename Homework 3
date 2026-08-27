@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPoUf7i/pGp3b02DIU2WfXS",
+      "authorship_tag": "ABX9TyO5Oht+sxv0eGZHMOe8Uz0k",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -111,6 +111,11 @@
         "from sklearn.datasets import load_iris\n",
         "from sklearn.model_selection import GridSearchCV, cross_val_score\n",
         "from sklearn.neighbors import KNeighborsClassifier\n",
+        "import os\n",
+        "\n",
+        "# Create a directory to save plots if it doesn't exist\n",
+        "output_dir = 'images'\n",
+        "os.makedirs(output_dir, exist_ok=True)\n",
         "\n",
         "# 1. Load the Iris dataset\n",
         "iris = load_iris()\n",
@@ -143,6 +148,7 @@
         "plt.ylabel(\"Cross-Validated Accuracy\")\n",
         "plt.xticks(range(1, 31, 2))\n",
         "plt.grid(True)\n",
+        "plt.savefig(os.path.join(output_dir, 'knn_accuracy_trend.png')) # Save the plot\n",
         "plt.show()\n",
         "\n",
         "# Graph 2: Detailed plot highlighting peak values/optimal K\n",
@@ -159,6 +165,7 @@
         "plt.ylabel(\"Cross-Validated Accuracy\")\n",
         "plt.legend()\n",
         "plt.grid(True)\n",
+        "plt.savefig(os.path.join(output_dir, 'knn_optimal_k_identification.png')) # Save the plot\n",
         "plt.show()\n",
         "\n",
         "# 4. Confirmation using GridSearchCV\n",
