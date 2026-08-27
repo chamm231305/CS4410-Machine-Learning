@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyO5Oht+sxv0eGZHMOe8Uz0k",
+      "authorship_tag": "ABX9TyPSICVavL9JpQiKvirWrab9",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,14 +28,14 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": 2,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 1000
         },
         "id": "yjAL1bgWd6l9",
-        "outputId": "d687efe6-0870-400e-fa2c-d970befd7d3e"
+        "outputId": "85d25952-0ea0-4836-9563-0fa469db1ab8"
       },
       "outputs": [
         {
@@ -178,6 +178,39 @@
         "print(\"--- GridSearchCV Confirmation ---\")\n",
         "print(f\"Best Parameters: {grid.best_params_}\")\n",
         "print(f\"Best Cross-Validated Accuracy: {grid.best_score_:.4f}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "350223b2"
+      },
+      "source": [
+        "#### Graph 2: Hyperparameter Tuning: Optimal K Identification\n",
+        "\n",
+        "![KNN Optimal K Identification](images/knn_optimal_k_identification.png)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d57616a9"
+      },
+      "source": [
+        "#### Graph 1: Value of K for KNN vs. Cross-Validated Accuracy\n",
+        "\n",
+        "![KNN Accuracy Trend](images/knn_accuracy_trend.png)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3f46f730"
+      },
+      "source": [
+        "### Visualizing the Results\n",
+        "\n",
+        "To ensure the plots are visible on GitHub, they have been saved as PNG files in the `images` directory and embedded below using Markdown. Please make sure to commit the `images` folder along with this notebook to your GitHub repository."
       ]
     }
   ]
